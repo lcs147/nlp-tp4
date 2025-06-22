@@ -1,0 +1,6 @@
+**datasets/
+**checkpoints/
+**pycache**
+**.deepeval/
+./**.zip
+./**.pdf
