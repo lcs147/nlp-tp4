@@ -9,8 +9,8 @@ Siga os passos abaixo para configurar o ambiente e executar o pipeline experimen
 ## 2. Clonando o Repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd fine-tuning_tradeoff
+git clone git@github.com:lcs147/nlp-tp4.git
+cd nlp-tp4
 ```
 
 ## 3. Instalando as Dependências
@@ -36,7 +36,7 @@ pipenv shell
 
 ## 4. Download dos Dados
 
-- Baixe o **Spider dataset** e coloque os arquivos em `datasets/spider_data/`.
+- Baixe o **Spider dataset** em [https://yale-lily.github.io/spider](https://yale-lily.github.io/spider) e coloque os arquivos em `datasets/spider_data/`.
 - Os dados do **MMLU** são baixados automaticamente via Hugging Face Datasets.
 
 ## 5. Execução dos Scripts
@@ -59,23 +59,29 @@ Execute os scripts na ordem abaixo para reproduzir o pipeline:
     ```bash
     python scripts/2_calculando_baseline.py
     ```
+    (Resultados exibidos no terminal)
 
 4. **Avaliação customizada com DeepEval:**
     ```bash
     python scripts/3_avaliacao_customizada.py
     ```
+    (Resultados exibidos no terminal)
 
 5. **Avaliação de generalização no MMLU:**
     ```bash
     python scripts/4_analise_mmlu.py
     ```
+    (Resultados exibidos no terminal)
 
 ## 6. Resultados
-Os resultados intermediários serão salvos na pasta `checkpoints/`.
 
-Os resultados finais (acurácia, desvio padrão) são reportados na saida (stdout) dos scripts.
+Os resultados intermediários são salvos em `checkpoints/`.  
+Os resultados finais (acurácia, desvio padrão) são exibidos na saída dos scripts.
 
 ## 7. Observações
 
 - Todos os seeds aleatórios foram fixados em 42 para garantir reprodutibilidade.
-- Se utilizar Google Colab, adapte os caminhos dos arquivos conforme necessário.
+- Se estiver usando Google Colab, ajuste os caminhos dos arquivos conforme necessário.
+- O notebook `experiments_runner_colab.ipynb` guarda as saídas dos experimentos rodados.
+- O arquivo `./relatorio_latex/results.txt` guarda todos os resultados utilizados no relatório.
+- O relatório está disponível em `./relatorio_latex/main.pdf`.
